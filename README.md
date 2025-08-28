@@ -34,4 +34,4 @@ E pronto! Agora você pode jogar.
 -   **JavaScript:** Para toda a lógica e interatividade do jogo.
 
 ---
-Feito com ❤️ para a comunidade de desenvolvedores.
+Feito para a comunidade de desenvolvedores.
