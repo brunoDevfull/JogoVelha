@@ -1,0 +1,94 @@
+/* Estilização geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+/* Estilização do tabuleiro */
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Estilização de cada célula do tabuleiro */
+.celula {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 5rem;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre uma célula vazia */
+.celula:not(.x):not(.o):hover {
+    background-color: #d4d4d4;
+}
+
+/* Estilização para as células marcadas com X e O */
+.celula.x, .celula.o {
+    cursor: not-allowed;
+}
+
+.celula.x {
+    color: #d9534f; /* Vermelho */
+}
+
+.celula.o {
+    color: #428bca; /* Azul */
+}
+
+/* Área de mensagens e botão */
+.mensagem-status {
+    text-align: center;
+    margin-top: 25px;
+}
+
+p[data-mensagem-texto] {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#botaoReiniciar {
+    background-color: #5cb85c; /* Verde */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botaoReiniciar:hover {
+    background-color: #4cae4c;
+}
+
+/* --- ADIÇÃO CORRETIVA --- */
+/* Estilo para desativar cliques no tabuleiro quando o jogo termina */
+.tabuleiro.fim-de-jogo {
+    pointer-events: none;
+    opacity: 0.8;
+}
